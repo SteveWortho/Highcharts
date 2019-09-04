@@ -84,16 +84,19 @@ namespace HighCharts.Controllers
                 },
                 yAxis = new YAxis()
                 {
+                    categories = new List<string> { "0", "25", "50", "100" },
                     gridLineWidth = 1,
                     labels = new AxisLabels()
                     {
                         align = "right",
-                        style = highChartsStyle
+                        style = highChartsStyle,
+                       // formatter = "function() {return this.value;}"
                     },
                     title = new Title() { text = "test", style = titleStyle },
                     gridLineColor = "#8C8C8C",
                     tickInterval = 10,
-                    tickmarkPlacement = "on"
+                    tickmarkPlacement = "on",
+                    
 
                 },
                 series = new List<ColumnSeriesData>{ new ColumnSeriesData()
